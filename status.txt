@@ -1,3 +1,6 @@
  
 
 	--- getting more information from client ----
+
+
+	part 1
