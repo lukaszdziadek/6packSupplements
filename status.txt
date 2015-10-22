@@ -8,3 +8,5 @@
 	part 2 modif
 
 	part 3 powershell master 
+
+	part 4 galaz addGallery
