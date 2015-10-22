@@ -1,2 +1,3 @@
 
-2. druga linia
+1. pierwsza linia z addGallery
+
