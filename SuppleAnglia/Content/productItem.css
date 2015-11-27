@@ -31,13 +31,57 @@
     color:#23A2E5;
 }
 
-.right-product-info {
+.right-product-info, .product-detail-info {
     border-left-style:solid;
     border-left-width:1px;
     border-left-color:#e8e8e8;
 }
 
-.product-price {
+
+/*  Detale produktu po wybraniu z listy */
+
+
+.container-product-info{
+    background-color :white;
+    border-style:solid;
+    border-width:1px;
+    border-color:#e8e8e8;
+    padding:30px;
+}
+
+.product-detail-info  {
+
+    border-left-width : 2px;
+}
+
+.product-detail-info > h2 {
+    font-weight:500;
+    color:darkslategrey;
+}
+.product-detail-info > h3 {
+    color:orangered !important;
+}
+
+.product-picture {
+    /*padding-top:30px;*/
+}
+
+.product-buttons > button {
+    width: 200px;
+}
+
+#spinner {
+    width:50px;
+}
+
+.quantity-container {
+    padding:0;
+}
+
+/*  -------------------     */
+
+
+.product-price, .product-detail-info > h3 {
     font-size:24px;
     color:#2c2b2a;
     font-weight:bold;

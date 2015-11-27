@@ -1,7 +1,46 @@
 ﻿
+
 @{
     ViewBag.Title = "ProductInfo";
 }
 
+@section ProductScript {
+    <script src="~/Scripts/Product/spinner-component.js"></script>
+}
+
 <h2>ProductInfo</h2>
+
+<div class="container-product-info well">
+    <div class="row">
+        <div class="product-picture col-md-4 text-center ">
+            <img src="~/Content/images/Products/Detail/img-productDetail.png" />
+        </div>
+        <div class="product-detail-info col-md-7 col-md-offset-1 ">
+            <h2>Super POWER Mega[1tona]</h2>
+            <h3>Our price : 23,24 PLN</h3>
+            <div class="quantity-container col-md-4">
+                    <label for="spinner">Quantity</label>
+                    <input id="spinner" name="value" />
+            </div>
+            <div class="available-container col-md-8" >
+                <div class="label-container col-md-5">
+                    <label id="availableLabel">Dostępność:</label>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-responsive" src="~/Content/images/icons/delete.png" style="height:20px;" />
+                </div>
+            </div>
+            <div class="product-buttons col-md-12">
+                <div class="row">
+                    <button id="addCart-btn" class="btn btn-primary col-md-offset-1" >Add to Cart 
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                    </button>
+                    <button id="addWishList-btn" class="btn btn-primary" >Add to wish List 
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                </div>
+            </div>
+            </div>
+    </div>
+</div>
 

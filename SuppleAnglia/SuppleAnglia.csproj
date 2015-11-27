@@ -191,6 +191,7 @@
     <Content Include="Content\images\icons\pl.png" />
     <Content Include="Content\images\icons\sale-icon - Copy.png" />
     <Content Include="Content\images\icons\sale-icon.png" />
+    <Content Include="Content\images\Products\Detail\img-productDetail.png" />
     <Content Include="Content\images\XX\Contact\contact-us.jpg" />
     <Content Include="Content\images\XX\suppl2.jpg" />
     <Content Include="Content\images\XX\supple-zolty.jpg" />
@@ -231,6 +232,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Product\spinner-component.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />

@@ -20,6 +20,10 @@
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/Contact/validationForm.js"></script>
+    @if(IsSectionDefined("ProductScript"))
+    {
+        @RenderSection("ProductScript");
+    }
 </head>
 <body>
     <header>
