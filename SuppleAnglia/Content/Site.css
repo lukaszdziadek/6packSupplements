@@ -1,6 +1,7 @@
 ﻿body {
     padding-top:0px;
-    padding-bottom: 20px;
+    background-color:#F4F7F0;
+    font-family:ProximaNovaReg,ProximaNova;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -42,22 +43,25 @@ input[type="checkbox"].input-validation-error {
 }
 
 
+#srodek {
+    background-color:white;
+}
+
 /* ---- Top Menu ---- */
 
 .top-menu {
-    background-color: #f4f7f0;
+    background-color: #F4F7F0;
     font-size: 12px;
     color: #393939;
     font-family: Roboto, sans-serif;
     height:30px;
     border-bottom: 1px solid;
     border-bottom-color:#aaa;
-
 }
 
 #srodek {
     height:140px;
-    padding-top:30px;
+    /*padding-top:30px;*/
 }
 
 #nawigacja {
@@ -66,6 +70,7 @@ input[type="checkbox"].input-validation-error {
     border-top-color:#aaa;
     border-bottom-color:#aaa;
     background-color:#393939;
+    margin-bottom:30px;
 }
 
 
@@ -97,4 +102,16 @@ input[type="checkbox"].input-validation-error {
 
 .zakmniete {
     font-size:5px;
+}
+
+
+/* Contact Page */
+
+/*.contact-container {
+    background-color:white;
+    padding-top:15px;
+}*/
+
+.form-container {
+    padding-top:30px;
 }

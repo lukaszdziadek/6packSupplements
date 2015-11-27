@@ -108,3 +108,6 @@ D:\Projekty\6packSupplements\SuppleAnglia\bin\Microsoft.Owin.Security.MicrosoftA
 D:\Projekty\6packSupplements\SuppleAnglia\obj\Debug\SuppleAnglia.csprojResolveAssemblyReference.cache
 D:\Projekty\6packSupplements\SuppleAnglia\obj\Debug\SuppleAnglia.dll
 D:\Projekty\6packSupplements\SuppleAnglia\obj\Debug\SuppleAnglia.pdb
+D:\Projekty\6packSupplements\SuppleAnglia\bin\CaptchaMvc.dll
+D:\Projekty\6packSupplements\SuppleAnglia\bin\CaptchaMvc.pdb
+D:\Projekty\6packSupplements\SuppleAnglia\bin\CaptchaMvc.xml

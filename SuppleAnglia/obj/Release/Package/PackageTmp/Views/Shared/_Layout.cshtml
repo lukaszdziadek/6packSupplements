@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="@Url.Content("~/Content/bootstrap.min.css")" type="text/css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")" type="text/css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/footer-distributed-with-address-and-phones.css")" type="text/css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/menu.css")" type="text/css"/>
+    <link rel="stylesheet" href="@Url.Content("~/Content/productItem.css")" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="@Url.Content("~/Content/best-sale.css")" type="text/css" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/asideMenu.js"></script>
+</head>
+<body>
+    <header>
+        <div class="top-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+                            <li><img src="~/Content/images/icons/pl.png" /></li>
+                            <li><img src="~/Content/images/icons/england.png" /></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="nav nav-pills pull-right">
+                            <li>@Html.ActionLink("Log in", "Login")</li>
+                            <li>@Html.ActionLink("Register", "Register")</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="srodek">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-responsive"src="~/Content/images/XX/logo2napis.png" />
+                     </div>
+                    <div class="col-md-2 pull-right">
+                        <img src="data:image/png;base64,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" />
+                        Products(0);
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="nawigacja">
+            <div class="container">
+                <div class="col-md-4">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <img class="navbar-brand" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAAy5JREFUeNp8lM9rXFUUxz/nvjeZmcckTFsTA8VawUIDAdcuXIj/QEFcdUArrkQQd5mFxZUILkQq3SiJ4kZICrruQv8AsYmFRuiiUBGlEFqZybvv/jwuZjrJ2LQHLu97D/d97ve++86RN/cVAIGqXfA+cAr4ReHmowg9Q1kVfAFgMx89isSDBDZmxDsIFhoL9hCamtIwCYULdeLz6fRVq9zMSuGVLR8ZTPN94B0g8ZQoH+YZMASd6XFQWBC+bRIDneZFGMjkNG8D+UTggzDTKjIRWakErlthkBXahu8FpEkMjDDQCfQKEJ8A5hBO2uh1hTeyQquQj1+uyt+B5s4o3glJPzXCABCEK8AcwBAdBAfB6fQJwRn1DWX2wxe75j7Kjyg/neuaW2X2Q/UNBHeZlLaA1jzw7/vw8AHUo4S34C3qakwKw+Wqs6fGfDNKyCjREWNuLFedXZPCUF0N3l4mpc3jUENwkGKL4K5ia6jHSPDD3tLibiqLnVGidahwqDBKVKksbvSWFncl+CH1GGw9IMZNRFoToEiXlDZxzQA7hhg3itPLu6Fo7Ywi1SjB3IhUoWjtFKeXd4lxAzsGZydQ6Mr6D79eQ+QDcoJyYYMXLuzRrbbJ2uNZYWSMrd/iz7uvEP1nmAJUvzI4C/WoIachq+f3KBe2ca5H8BA86j15OtRPcgQPzvUoF7ZZPb9HTkPqUYOzyPrmzx1cc4GX1i5yZnWTFGfOFFzbyNdG5GDyf+pzLut7Au2Z06Icc/DPu9zb/4N2564hp4aVs7dZ7F/C2SNnwVOJfrLW7/623u9eXO9319b63VuV6FUNx53aHov9S6ycvU1OTcnqOaiWwFnP4xoDVJWiNPf+VfkyR54HMIW8VuT0oTqLPC6rSU16Tq1Au0NJqwOuefKb50zdald/ebxOq1YSMfnYM86BMU9eVKtDibMn36Jmsms0Wa/MiEbFNUp0IObkboN3TwViSqQeHWssBpwF/0zg7LgyDzzqWXO6OZwC55bLETC4Iz1PBE0tUlxEZ68tEn2LFP+/f3kk4qz7XAc9BDoTGhDDPq7ZAs5M1xyA7gPfHXPWgDye898AraHE/cXtxBUAAAAASUVORK5CYII=" />
+                        </li>
+                        <li class="dupa"></li>
+                        <li>@Html.ActionLink("About us", "About", null, new { @class = "menu-links" })</li>
+                        <li class="dupa"></li>
+                        <li>@Html.ActionLink("Shipping", "Shipping", null, new { @class = "menu-links" })</li>
+                        <li class="dupa"></li>
+                        <li>@Html.ActionLink("Contact us", "Contact", null, new { @class = "menu-links" })</li>
+                        <li class="dupa"></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <!-- Search engine -->
+                    <div id="searchEngine">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <input type="text" placeholder="Search...." class="form-control">
+                                <button class="btn btn-default" type="button">Go!</button>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="col-md-2">
+            <aside>
+                <ul id="lista" class="text-left">
+                    <li id="pierwszyDzial">&nbsp Dzial pierwszy
+                    <ul id="blue" class="text-center">
+                        <li>asdsadasdsad</li>
+                        <li>asdsadasdsad</li>
+                        <li>asdsadasdsad</li>
+                        <li>asdsadasdsad</li>
+                        <li>asdsadasdsad</li>
+                    </ul>
+                    </li>
+                    <li id="drugiDzial">&nbsp Dzial drugi
+                        <ul id="blue" class="text-center">
+                            <li>bbbb</li>
+                            <li>bbbb</li>
+                            <li>bbbbb</li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <div class="col-md-7">
+
+            @RenderBody()
+        </div>
+        <div class="best-sale-container col-md-3">
+            <div class="row">
+                <img class="col-md-5"  src="~/Content/images/icons/sale-icon.png" style="height:100px;"/>
+                <img class="col-md-7 img-responsive" src="~/Content/images/XX/suppl2.jpg" style="padding:10px;height:150px;" />
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-md-12 product-price" style="text-decoration:line-through"> 120,99 </div>
+                                <div class="col-md-12 product-price"> 120,99 PLN </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="button-container col-md-12">
+                                <button class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                                    Dodaj do koszyka
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    </div>
+    <!-- footer -->
+    <footer class="footer-distributed">
+        <div class="container">
+            <div class="footer-left">
+                <h3>6pack<span>Supplements</span></h3>
+                <p></p>
+                <p class="footer-company-name"> &copy; 2015</p>
+            </div>
+            <div class="footer-center">
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span></span> Miasto, Panstwo</p>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+0 00 000 000 zglos sie</p>
+                    <img src="~/Content/images/XX/mobile.png" />
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:support@company.com">office@6pack-supplements.co.uk</a></p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p class="footer-company-about">
+                    <span></span>
+                    W naszej ofercie znajdą Państwo szeroką gamę odżywek dla sportowców oraz suplementów diety.
+                    Proponujemy wysokiej jakości produkty renomowanych producentów, w atrakcyjnych cenach, a zamówienia realizujemy szybko oraz bezpiecznie.
+                    <span></span>
+                </p>
+                <div>
+                    <ul class="list-inline">
+                        <li><a href="#"><img src="~/Content/images/XX/facebook-mini.png" />   </a></li>
+                        <li><a href="#"><img src="~/Content/images/XX/twitter.png" />   </a></li>
+                        <li><a href="#"><img src="~/Content/images/XX/blogger.png" />   </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CaptchaMvc">
+      <HintPath>..\packages\CaptchaMvc.Mvc5.1.5.0\lib\net45-full\CaptchaMvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -160,6 +163,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PersonModel.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -169,17 +174,41 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\best-sale.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\footer-basic-centered.css" />
+    <Content Include="Content\footer-distributed-with-address-and-phones.css" />
+    <Content Include="Content\images\icons\accept.png" />
+    <Content Include="Content\images\icons\correct.png" />
+    <Content Include="Content\images\icons\Delete.png" />
     <Content Include="Content\images\icons\england.png" />
     <Content Include="Content\images\icons\home.png" />
     <Content Include="Content\images\icons\home_icon.png" />
     <Content Include="Content\images\icons\house-icon.png" />
     <Content Include="Content\images\icons\pl.png" />
+    <Content Include="Content\images\icons\sale-icon - Copy.png" />
+    <Content Include="Content\images\icons\sale-icon.png" />
+    <Content Include="Content\images\XX\Contact\contact-us.jpg" />
+    <Content Include="Content\images\XX\suppl2.jpg" />
+    <Content Include="Content\images\XX\supple-zolty.jpg" />
+    <Content Include="Content\images\XX\best-price.gif" />
+    <Content Include="Content\images\XX\blogger.png" />
     <Content Include="Content\images\XX\caterpillar-logo.jpg" />
+    <Content Include="Content\images\XX\facebook-dlugi.png" />
+    <Content Include="Content\images\XX\facebook-mini.png" />
+    <Content Include="Content\images\XX\facebook.png" />
+    <Content Include="Content\images\XX\logo2.png" />
+    <Content Include="Content\images\XX\logo2napis.png" />
+    <Content Include="Content\images\XX\mobile.png" />
     <Content Include="Content\images\XX\shopping.png" />
+    <Content Include="Content\images\XX\suplementy.jpg" />
+    <Content Include="Content\images\XX\supplement1.jpg" />
+    <Content Include="Content\images\XX\twitter.png" />
+    <Content Include="Content\menu.css" />
+    <Content Include="Content\productItem.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -190,7 +219,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\fonts\Ubuntu-Title.ttf" />
+    <None Include="Properties\PublishProfiles\grandit.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Contact\validationForm.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -227,6 +259,8 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Partial1.cshtml" />
+    <Content Include="Views\Shop\ProductInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
